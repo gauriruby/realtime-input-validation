@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation with Events</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+        .input-field {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Form Validation</h1>
+    <form id="registration-form">
+        <div class="input-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <div id="name-error" class="error-message">Name is required.</div>
+        </div>
+
+        <div class="input-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <div id="email-error" class="error-message">Please enter a valid email.</div>
+        </div>
+
+        <div class="input-field">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <div id="password-error" class="error-message">Password must be at least 8 characters long.</div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
